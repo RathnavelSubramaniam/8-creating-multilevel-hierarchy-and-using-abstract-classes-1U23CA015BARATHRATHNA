@@ -1,26 +1,65 @@
-// Animal.java
-public abstract class Animal {
-// Basic attributes and methods including abstract sound method
+class Animal {
+    String name;
+    int age;
+
+    void eat() {
+        
+    }
+
+    void sleep() {
+    
+    }
+    abstract void makeSound();
 }
 
-// Mammal.java
-public class Mammal extends Animal {
-// Additional attributes and methods
+class Mammal extends Animal {
+    String furColor;
+
+    void giveBirth() {
+        
+    }
+
+    void makeSound() {
+        
+    }
 }
 
-// Bird.java
-public class Bird extends Animal {
-// Additional attributes and methods
+class Bird extends Animal {
+    boolean canFly;
+
+    void fly() {
+        
+    }
+
+    void makeSound() {
+
+    }
+}
+class Parrot extends Bird {
+    String featherColor;
+
+    void mimic() {
+    
+    }
+
+    void makeSound() {
+        
+    }
+
+    final void parrotSpecificMethod() {
+
+    }
 }
 
-// Parrot.java
-public class Parrot extends Bird {
-// Additional characteristics specific to Parrot
-}
-
-// Main.java
 public class Main {
-public static void main(String[] args) {
-// Instantiate and demonstrate object class methods
+    public static void main(String[] args) {
+        Mammal mammal = new Mammal();
+        Bird bird = new Bird();
+        Parrot parrot = new Parrot();
+
+        System.out.println(mammal.toString());
+        System.out.println(bird.equals(mammal));
+        System.out.println(parrot.toString());
+    }
 }
-}
+
